@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: cursive;
+            background: linear-gradient(to bottom, #e5a6a0, #1699bc);
+        }
+
+        .mouse {
+            border: black 2px solid;
+            padding: 45px;
+            margin: 11px;
+            border-radius: 11px;
+            background: linear-gradient(to bottom, #cf695f, #22a6ff);
+            transition: 0.5s;
+            text-shadow: 2px 3px 6px mistyrose;
+
+        }
+
+        .mouse:hover {
+            background: linear-gradient(to bottom, #53a5dc, #cf695f);
+            transition-property: all;
+            transform: scale(1.05);
+            text-shadow: 3px 1px 6px floralwhite;
+        }
+
+
+        .num {
+            display: flex;
+            justify-content: center;
+            font-size: 21px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="inner">
+            <div class="mouse" onmousemove="move()">
+                <h1>Mouse move in</h1>
+                <div class="num">
+                    <span id="col1">Move</span>
+                </div>
+            </div>
+            <div class="mouse" onmouseout="out()">
+                <h1>Mouse out </h1>
+                <div class="num">
+                    <span id="col2">Out</span>
+                </div>
+            </div>
+            <div class="mouse" onmouseleave="leave()">
+                <h1>Mouse leave</h1>
+                <div class="num">
+                    <span id="col3">Leave</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+        var a = 0;
+        var b = 0;
+        var c = 0;
+
+
+        function move() {
+            document.getElementById("col1").innerHTML = a += 1
+        }
+
+        function out() {
+            document.getElementById("col2").innerHTML = b += 1
+        }
+
+        function leave() {
+            document.getElementById("col3").innerHTML = c += 1
+        }
+
+    </script>
+
+
+</body>
+
+</html>
